@@ -24,3 +24,7 @@ build:
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
   ci:
     - python --version
+branches:
+  only:
+    - branch-one
+    - branch-two
