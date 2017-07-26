@@ -15,7 +15,10 @@ python:
   #- pypy3-v5.8.0
   #- pypy2-v5.8.0
  
-
+branches:
+  only:
+    - branch-one
+    - branch-two
 build:
   pre_ci_boot:
     image_name: drydock/u14pytall
@@ -24,7 +27,4 @@ build:
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
   ci:
     - python --version
-branches:
-  only:
-    - branch-one
-    - branch-two
+
